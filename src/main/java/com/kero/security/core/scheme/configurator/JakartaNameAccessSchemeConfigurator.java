@@ -15,20 +15,15 @@ public class JakartaNameAccessSchemeConfigurator implements AccessSchemeConfigur
 	public void configure(AccessScheme scheme) {
 	
 		Class<?> type = scheme.getTypeClass();
-	
-		while(type != Object.class && !type.isAnnotationPresent(Entity.class)) {
-	
-			type = type.getSuperclass();
-		}
-		
+
 		if(!type.isAnnotationPresent(Entity.class)) return;
 
-		Entity annotation = type.getDeclaredAnnotation(Entity.class);
+		Entity annotation = type.getAnnotation(Entity.class);
 		
 		String name = annotation.name();
 		
 		scheme.setAliase(name);
 		
-		LOGGER.debug("Fetch scheme aliase: "+name+" from @Entity");
+		LOGGER.debug("Fetch scheme aliase: \""+name+"\" from @Entity");
 	}
 }
