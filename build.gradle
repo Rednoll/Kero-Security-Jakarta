@@ -26,7 +26,7 @@ dependencies {
 	testImplementation 'org.slf4j:slf4j-log4j12:1.7.25'   
 	testImplementation 'log4j:log4j:1.2.17'
 	
-	implementation 'com.github.Rednoll:Kero-Security:7bbbb4f6b6'
+	implementation 'com.github.Rednoll:Kero-Security:b9f6332'
 	implementation 'jakarta.persistence:jakarta.persistence-api:2.2.3+'
 }
 
