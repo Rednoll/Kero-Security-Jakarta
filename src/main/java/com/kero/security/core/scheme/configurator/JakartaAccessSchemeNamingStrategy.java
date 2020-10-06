@@ -14,7 +14,7 @@ public class JakartaAccessSchemeNamingStrategy extends DefaultAccessSchemeNaming
 	@Override
 	public String getName(Class<?> rawType) {
 
-		if(!rawType.isAnnotationPresent(Entity.class)) return getName(rawType);
+		if(!rawType.isAnnotationPresent(Entity.class)) return super.getName(rawType);
 
 		Entity annotation = rawType.getAnnotation(Entity.class);
 		
