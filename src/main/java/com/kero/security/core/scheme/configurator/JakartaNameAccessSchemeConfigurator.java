@@ -23,12 +23,12 @@ public class JakartaNameAccessSchemeConfigurator implements AccessSchemeConfigur
 		
 		if(!type.isAnnotationPresent(Entity.class)) return;
 
-		Entity annotation = type.getAnnotation(Entity.class);
+		Entity annotation = type.getDeclaredAnnotation(Entity.class);
 		
 		String name = annotation.name();
 		
 		scheme.setAliase(name);
 		
-		LOGGER.info("Fetch scheme aliase: "+name+" from @Entity");
+		LOGGER.debug("Fetch scheme aliase: "+name+" from @Entity");
 	}
 }
