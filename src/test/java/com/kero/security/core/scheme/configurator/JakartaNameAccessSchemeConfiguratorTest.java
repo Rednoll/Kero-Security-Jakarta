@@ -9,7 +9,7 @@ public class JakartaNameAccessSchemeConfiguratorTest {
 	@Test
 	public void test() {
 		
-		JakartaAccessSchemeNamingStrategy conf = new JakartaAccessSchemeNamingStrategy();
+		EntityAccessSchemeNamingStrategy conf = new EntityAccessSchemeNamingStrategy();
 		
 		String name = conf.getName(JakartaNameTestEntity.class);
 		
