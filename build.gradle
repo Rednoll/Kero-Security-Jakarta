@@ -82,6 +82,7 @@ dependencies {
 	testImplementation 'log4j:log4j:1.2.17'
 	
 	implementation 'com.github.rednoll:kero-security:[0.1.38,)'
+	
 	implementation 'jakarta.persistence:jakarta.persistence-api:2.2.3'
 }
 
